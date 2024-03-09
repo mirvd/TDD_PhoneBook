@@ -35,7 +35,8 @@ public class PhoneBook {
         return null;
     }
     public List<String> printAllNames(){
-
-        return null;
+        List<String> sortedNames = new ArrayList<>(phoneBook);
+        Collections.sort(sortedNames);
+        return sortedNames;
     }
 }
