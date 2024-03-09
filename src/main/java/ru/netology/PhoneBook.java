@@ -14,7 +14,12 @@ public class PhoneBook {
         return phoneBook.size();
     }
     public String findByNumber(String phoneNumber){
-
+        for (String contact: phoneBook) {
+            if (contact.endsWith(" - " + phoneNumber)) {
+                int index = contact.indexOf("-");
+                return contact.substring(0, index);
+            }
+        }
         return null;
     }
 }
