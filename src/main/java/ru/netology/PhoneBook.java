@@ -1,6 +1,7 @@
 package ru.netology;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PhoneBook {
@@ -31,6 +32,10 @@ public class PhoneBook {
                 }
             }
         }
+        return null;
+    }
+    public List<String> printAllNames(){
+
         return null;
     }
 }
