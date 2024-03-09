@@ -23,7 +23,14 @@ public class PhoneBook {
         return null;
     }
     public String findByName(String name){
-
+        for (String contact : phoneBook) {
+            if (contact.startsWith(name)) {
+                int index = contact.indexOf(" - ");
+                if (index != -1) {
+                    return contact.substring(index + 2);
+                }
+            }
+        }
         return null;
     }
 }
