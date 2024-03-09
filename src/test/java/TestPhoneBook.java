@@ -19,4 +19,13 @@ public class TestPhoneBook {
         String result = phoneBook.findByNumber("098");
         assertEquals("Ivan ", result);
     }
+    @Test
+    public void testFindName(){
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Roman", "123");
+        phoneBook.add("Ivan", "098");
+        phoneBook.add("Nina", "456");
+        String result = phoneBook.findByName("Nina");
+        assertEquals(" 456", result);
+    }
 }
